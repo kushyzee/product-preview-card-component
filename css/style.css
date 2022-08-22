@@ -1,0 +1,144 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --vdark-blue: hsl(212, 21%, 14%);
+    --dgrey-blue: hsl(228, 12%, 48%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--dgrey-blue);
+    padding: 2em 1em;
+}
+
+article {
+    max-width: 340px;
+    margin-inline: auto;
+    background-color: white;
+}
+
+article, .hero-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hero-img {
+    display: block;
+    max-width: 100%;
+}
+
+.text-wrapper {
+    padding-inline: 1.7em;
+    padding-bottom: 2em;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 1.8em;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 3.3rem;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    margin-block: .4em;
+    color: var(--vdark-blue);
+}
+
+.text-wrapper p:nth-of-type(1) {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.price {
+    margin-top: 1.4em;
+    margin-bottom: .5em;
+    font-size: 3.2rem;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    display: flex;
+    gap: .8em;
+}
+
+.price>s {
+    font-size: 1.3rem;
+    font-family: 'Montserrat',
+        sans-serif;
+    color: var(--dgrey-blue);
+    align-self: center;
+    font-weight: 500;
+}
+
+.button {
+    display: flex;
+    gap: .8em;
+    place-content: center;
+    padding-block: 1em;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: var(--dark-cyan);
+    color: hsl(0, 0%, 100%);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 48em)  {  /* 768px */
+    body {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    article {
+        display: flex;
+        place-content: center;
+        width: 550px;
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 0;
+    }
+
+    .hero-img {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0;
+    }
+
+    .image-wrapper, .text-wrapper {
+        position: relative;
+        width: 50%;
+    }
+
+    h1 {
+        margin-block: .5em;
+    }
+
+    .price {
+        margin-top: .7em;
+        margin-bottom: .6em;
+    }
+
+    .button {
+        transition: background-color .3s linear;
+    }
+
+    .button:hover {
+        background-color: hsl(158, 36%, 18%);
+    }
+
+}
